@@ -1,8 +1,8 @@
 <?php
     $host = "localhost";
-    $dbname = "si";
+    $dbname = "your db name";
     $user = "root";
-    $pass = "Hassan2006";
+    $pass = "";
 
 
     try {
