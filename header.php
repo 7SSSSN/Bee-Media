@@ -7,7 +7,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <title>Si Media</title>
+    
+    <title>Bee</title>
 
     <style>
         *{
@@ -16,28 +17,37 @@ session_start();
             list-style: none;
             text-decoration: none;
             
+
+            
         }
 
 
 
+
         .header{
-            height: 60px;
-            width: 100%;
-            background-color: #e6e033;
-            color: #000000 ;
+            
+            background-color: #000000;
+            color: #ffffff ;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 20px;
+            margin-bottom :30px;
+            margin :10px;
+            border-radius: 50px;
+            height: 70px;
+            
+            
         }
 
         .logo{
             margin-left: 30px;
             font-size: 30px;
+            font-family: "Open Sans", sans-serif;
         }
 
         .logo a{
-            color: white;
+            color: #ffffff;
         }
 
         .ulmid,
@@ -45,6 +55,11 @@ session_start();
             display: flex;
             gap: 20px;
             align-items: center;
+        }
+
+        .header .ulmid{
+            gap : 40px;
+            
         }
 
         .header .ulnotlog {
@@ -61,7 +76,7 @@ session_start();
         }
 
         .header a {
-            color: #000000 ;
+            color: #ffffff ;
         }
 
 
@@ -72,11 +87,13 @@ session_start();
     <div class="header">
 
         <p class="logo">
-            <a href="index.php">SiMedia</a>
+            <a href="index.php">Bee</a>
         </p>
 
         <?php if (isset($_SESSION['user_id'])): ?>
             <ul class="ulmid">
+                <li><span class="material-symbols-outlined">search</span></li>
+                <li><span class="material-symbols-outlined">add_box</span></li>
                 <li><span class="material-symbols-outlined">home</span></li>
                 <li><span class="material-symbols-outlined">notifications</span></li>
                 <li><span class="material-symbols-outlined">group</span></li>

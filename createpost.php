@@ -1,3 +1,28 @@
+
+<?php 
+
+    include "connexion.php";
+
+    if (isset($_POST['subpost'])){
+
+        $user_id = $_SESSION['user_id'];
+        $content = $_POST['post'] ;
+
+        $sql = "INSERT INTO posts(user_id, content)
+            VALUES(:user_id, :content)";
+
+
+        $stmt = $conn->prepare($sql);
+
+    $stmt->execute([
+        "user_id"=>$user_id,
+        "content"=>$content
+    ]);
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +61,18 @@
 
 
 
+<?php if (isset($_SESSION['user_id'])): ?>
 
-    <div class="createpost">
-        <input type="text" placeholder="your post">
-        <button type="submit">post it</button>
+    <form class="createpost" method="POST">
+        <input type="text" placeholder="your post" name="post">
+        <button type="submit" name="subpost">post it</button>
     </div>
-    
+<?php endif ?>
+
+
 </body>
 </html>
+
+
+
+    

@@ -1,15 +1,10 @@
-<?php
-    include "header.php" ;
-    include "createpost.php" ;
-    include "post.php" ;
-
-    if (isset($user_id)){
-        echo "hello";
-    }
-
-?>
 
 
+
+
+<div><?php include "header.php" ; ?></div>
+<div><?php include "createpost.php" ; ?></div>
+<div><?php include "post.php" ; ?></div>
 
 
 
